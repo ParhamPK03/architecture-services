@@ -2,10 +2,12 @@
 
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
+import { HiOutlineMenuAlt3, HiOutlineX } from "react-icons/hi"; // Import menu and close icons
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isMenuOpen, setIsMenuOpen] = useState(false); // State for menu visibility
 
   const menuItems = [
     "Home",
@@ -38,8 +40,8 @@ const Navbar = () => {
         isScrolled ? "bg-white shadow-md" : "bg-transparent"
       }`}
     >
-      <div className="flex justify-around items-center py-3">
-        {/* Left */}
+      <div className="flex justify-between items-center py-3 px-6">
+        {/* Left: Logo */}
         <div className="cursor-pointer">
           {isScrolled ? (
             <Image
@@ -53,8 +55,8 @@ const Navbar = () => {
           )}
         </div>
 
-        {/* Right */}
-        <div className="relative">
+        {/* Right: Navigation */}
+        <div className="hidden lg:flex relative">
           <ul
             className={`flex items-center gap-10 text-[18px] ${
               isScrolled ? "text-black" : "text-white"
@@ -78,7 +80,43 @@ const Navbar = () => {
             ))}
           </ul>
         </div>
+
+        {/* Mobile Menu: Hamburger Icon */}
+        <div className="lg:hidden">
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className={`text-4xl transition-colors duration-300 ${
+              isScrolled ? "text-black" : "text-white"
+            }`}
+          >
+            {isMenuOpen ? <HiOutlineX /> : <HiOutlineMenuAlt3 />}
+          </button>
+        </div>
       </div>
+
+      {/* Mobile Menu Dropdown */}
+      {isMenuOpen && (
+        <div className="lg:hidden bg-white shadow-md">
+          <ul className="flex flex-col items-center gap-6 py-4 text-black text-[18px]">
+            {menuItems.map((item, index) => (
+              <li
+                key={index}
+                onClick={() => {
+                  setActiveIndex(index);
+                  setIsMenuOpen(false); // Close menu after clicking
+                }}
+                className={`cursor-pointer ${
+                  activeIndex === index
+                    ? "text-[#ffbb00] font-bold"
+                    : "text-black"
+                }`}
+              >
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </div>
   );
 };

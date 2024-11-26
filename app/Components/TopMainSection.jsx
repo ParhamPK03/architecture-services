@@ -3,36 +3,47 @@ import React from "react";
 
 const TopMainSection = () => {
   return (
-    <div className="flex justify-center gap-8 mt-32">
+    <div className="flex flex-wrap justify-center gap-8 mt-20 px-4 lg:mt-32">
+      {/* بخش 1 */}
       <div className="flex flex-col items-center">
         <Image
           src="/images/ProjectPlaning.jpg"
           alt="Project-Planing"
           width={370}
           height={270}
-          className="rounded-3xl"
+          className="rounded-3xl hover:scale-110 duration-300"
         />
-        <h4 className="text-3xl mt-5 font-bold text-blue-950">Project Planing</h4>
+        <h4 className="text-2xl md:text-3xl mt-5 font-bold text-blue-950 text-center">
+          Project Planing
+        </h4>
       </div>
+
+      {/* بخش 2 */}
       <div className="flex flex-col items-center">
         <Image
           src="/images/Architecture1.jpg"
           alt="Architecture"
           width={370}
           height={270}
-          className="rounded-3xl"
+          className="rounded-3xl hover:scale-110 duration-300"
         />
-        <h4 className="text-3xl mt-5 font-bold text-blue-950">Architecture</h4>
+        <h4 className="text-2xl md:text-3xl mt-5 font-bold text-blue-950 text-center">
+          Architecture
+        </h4>
       </div>
+
+      {/* بخش 3 */}
       <div className="flex flex-col items-center">
         <Image
           src="/images/Construction.jpg"
           alt="Construction"
           width={370}
           height={270}
-          className="rounded-3xl"
+          className="rounded-3xl hover:scale-110 duration-300"
         />
-        <h4 className="text-3xl mt-5 font-bold text-blue-950">Construction</h4>
+        <h4 className="text-2xl md:text-3xl mt-5 font-bold text-blue-950 text-center">
+          Construction
+        </h4>
       </div>
     </div>
   );

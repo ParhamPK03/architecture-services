@@ -2,6 +2,9 @@ import React from "react";
 import Navbar from "./Navbar";
 import HeroSection from "./HeroSection";
 import TopMainSection from "./TopMainSection";
+import ExperianceSection from "./ExperianceSection";
+import ServicesSection from "./ServicesSection";
+import ProjectSection from "./ProjectSection";
 
 const Home = () => {
   return (
@@ -23,7 +26,12 @@ const Home = () => {
         </div>
       </div>
       {/* Navbar & HeroSection */}
-      <TopMainSection/>
+      <div className="w-[76%] mx-auto">
+        <TopMainSection />
+        <ExperianceSection />
+        <ServicesSection />
+        <ProjectSection />
+      </div>{" "}
     </div>
   );
 };
