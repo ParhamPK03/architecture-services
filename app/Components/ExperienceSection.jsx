@@ -1,9 +1,9 @@
 import Image from "next/image";
 import React from "react";
 
-const ExperianceSection = () => {
+const ExperienceSection = () => {
   return (
-    <div className="mt-20 lg:mt-60 flex flex-col lg:flex-row items-center gap-8 lg:gap-5 px-4">
+    <div className="mt-20 lg:mt-60 flex flex-col lg:flex-row items-center gap-8 lg:gap-5 px-4 w-[76%] mx-auto">
       <div className="w-full lg:w-1/2 max-w-[600px]">
         <Image
           src="/images/ExperianceYears.jpg"
@@ -41,4 +41,4 @@ const ExperianceSection = () => {
   );
 };
 
-export default ExperianceSection;
+export default ExperienceSection;

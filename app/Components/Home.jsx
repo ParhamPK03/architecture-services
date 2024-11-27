@@ -2,9 +2,11 @@ import React from "react";
 import Navbar from "./Navbar";
 import HeroSection from "./HeroSection";
 import TopMainSection from "./TopMainSection";
-import ExperianceSection from "./ExperianceSection";
+import ExperienceSection from "./ExperienceSection";
 import ServicesSection from "./ServicesSection";
 import ProjectSection from "./ProjectSection";
+import AchievementsSection from "./AchievementsSection";
+import TeamSection from "./TeamSection";
 
 const Home = () => {
   return (
@@ -16,22 +18,20 @@ const Home = () => {
           backgroundImage: `url('/images/HeroSection.jpg')`,
         }}
       >
-        {/* Glass Overlay */}
         <div className="absolute inset-0 bg-black/60 bg-opacity-50"></div>
 
-        {/* Content */}
         <div className="relative">
           <Navbar />
           <HeroSection />
         </div>
       </div>
-      {/* Navbar & HeroSection */}
-      <div className="w-[76%] mx-auto">
-        <TopMainSection />
-        <ExperianceSection />
-        <ServicesSection />
-        <ProjectSection />
-      </div>{" "}
+
+      <TopMainSection />
+      <ExperienceSection />
+      <ServicesSection />
+      <ProjectSection />
+      <AchievementsSection />
+      <TeamSection />
     </div>
   );
 };

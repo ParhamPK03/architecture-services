@@ -3,8 +3,7 @@ import React from "react";
 
 const TopMainSection = () => {
   return (
-    <div className="flex flex-wrap justify-center gap-8 mt-20 px-4 lg:mt-32">
-      {/* بخش 1 */}
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-20 px-4 lg:mt-32 justify-items-center mx-auto w-[76%]  ">
       <div className="flex flex-col items-center">
         <Image
           src="/images/ProjectPlaning.jpg"
@@ -18,7 +17,6 @@ const TopMainSection = () => {
         </h4>
       </div>
 
-      {/* بخش 2 */}
       <div className="flex flex-col items-center">
         <Image
           src="/images/Architecture1.jpg"
@@ -32,7 +30,6 @@ const TopMainSection = () => {
         </h4>
       </div>
 
-      {/* بخش 3 */}
       <div className="flex flex-col items-center">
         <Image
           src="/images/Construction.jpg"
