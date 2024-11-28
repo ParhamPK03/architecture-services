@@ -1,5 +1,5 @@
 import React from "react";
-import { services } from "./data/assets";
+import { services } from "./data/data";
 
 const ServicesSection = () => {
   return (

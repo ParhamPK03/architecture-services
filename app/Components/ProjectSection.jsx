@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 
-import { projects } from "./data/assets";
+import { projects } from "./data/data";
 
 const ProjectSection = () => {
   return (

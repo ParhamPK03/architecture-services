@@ -7,6 +7,7 @@ import ServicesSection from "./ServicesSection";
 import ProjectSection from "./ProjectSection";
 import AchievementsSection from "./AchievementsSection";
 import TeamSection from "./TeamSection";
+import ClientSection from "./ClientSection";
 
 const Home = () => {
   return (
@@ -32,6 +33,7 @@ const Home = () => {
       <ProjectSection />
       <AchievementsSection />
       <TeamSection />
+      <ClientSection/>
     </div>
   );
 };
